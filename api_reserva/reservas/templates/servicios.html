@@ -1,0 +1,26 @@
+{% include 'navbar.html' %} 
+{% load static %} 
+{% block content %} 
+
+<div class="content-conteiner">
+<table class="table">
+    <h2>Servicios</h2>
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Descripcion</th>
+            <th>Precio</th>
+        </tr>       
+    </thead>
+    <tbody>
+        {% for servicio in servicios %} 
+        <tr class="filas">
+            <td><a href="{% url 'detalle_servicio' servicio.id %}">{{ servicio.codigo }}</a></td>
+            <td>{{ servicio.descripcion }}</td>
+            <td>{{ servicio.precio }}</td>
+        {% endfor %} 
+    </tbody>
+</table>
+</div>
+
+{% endblock %} 

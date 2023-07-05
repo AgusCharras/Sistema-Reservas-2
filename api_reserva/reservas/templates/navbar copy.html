@@ -1,0 +1,35 @@
+{% extends 'base.html' %} 
+{% load static %} 
+{% block content %} 
+
+    
+<header>
+    <h1>Sistema de Reservas</h1>
+</header>
+
+<nav class="navbar navbar-expand-lg">
+
+    <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+            <a class="btn btn-outline-ligth" id="reservasBtn" href="/reservas">Reservas</a>
+            <a class="btn" id="serviciosBtn" href="/servicios">Servicios</a>
+            <a class="btn" id="clientesBtn" href="/clientes">Clientes</a>
+            <a class="btn" id="encargadosBtn" href="/encargados">Encargados</a>
+            <a class="btn" id="cabaniasBtn" href="/cabanias">Cabañas</a>
+            <a class="btn" id="complejosBtn" href="/complejos">Complejos</a>
+
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline" id="search" type="submit">Search</button>
+            </form>
+
+        </div>
+    </div>
+</nav>
+
+
+{% endblock %} 

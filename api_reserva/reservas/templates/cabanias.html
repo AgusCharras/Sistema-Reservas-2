@@ -1,0 +1,31 @@
+{% include 'navbar.html' %} 
+{% load static %} 
+{% block content %} 
+
+<div class="content-conteiner">
+<table class="table">
+<h2>Cabañas</h2>
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Tipo</th>
+            <th>Capacidad</th>
+            <th>Precio</th>
+            <th>Complejo</th>
+        </tr>       
+    </thead>
+    <tbody>
+        {% for cabania in cabanias %} 
+        <tr class="filas">
+            <td><a href="{% url 'detalle_cabania' cabania.id %}">{{ cabania.nombre }}</a></td>
+            <td>{{ cabania.tipo }}</td>
+            <td>{{ cabania.capacidad }}</td>
+            <td>{{ cabania.precio }}</td>
+            <td>{{ cabania.complejo }}</td>
+        {% endfor %} 
+        </tr>
+    </tbody>
+</table>
+</div>
+
+{% endblock %} 

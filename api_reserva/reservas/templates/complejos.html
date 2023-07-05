@@ -1,0 +1,26 @@
+{% include 'navbar.html' %} 
+{% load static %} 
+{% block content %} 
+
+<div class="content-conteiner">
+<table class="table">
+<h2>Complejos</h2>
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Direccion</th>
+            <th>Encargado</th>
+        </tr>       
+    </thead>
+    <tbody>
+        {% for complejo in complejos %} 
+        <tr class="filas">
+            <td><a href="{% url 'detalle_complejo' complejo.id %}">{{ complejo.nombre }}</a></td>
+            <td>{{ complejo.direccion }}</td>
+            <td>{{ complejo.encargado}}</td>
+        {% endfor %} 
+    </tbody>
+</table>
+</div>
+
+{% endblock %} 
